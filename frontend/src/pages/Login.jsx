@@ -10,7 +10,7 @@ function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [form, setForm] = useState({ email: 'admin@company.com', password: 'Admin@123' });
+  const [form, setForm] = useState({ email: '', password: '' });
   const [submitting, setSubmitting] = useState(false);
 
   const from = location.state?.from?.pathname || '/';
@@ -75,10 +75,6 @@ function Login() {
             {submitting ? 'Signing in...' : 'Sign in'}
           </button>
         </form>
-
-        <p className="mt-4 text-xs text-text-muted">
-          Demo users: admin@company.com / Admin@123, manager@company.com / Manager@123, employee@company.com / Employee@123.
-        </p>
       </div>
     </div>
   );
